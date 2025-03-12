@@ -1479,8 +1479,31 @@ footer h3 {
   font-size: 34px;
 }
 
-
-
+/*Botón Comentarios*/
+.comentarios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-comentarios  {
+  text-align: center;
+  font-family: 'Heebo', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-weight: 700;
+  background-color: #8cc63e;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.btn-comentarios:hover  {
+  background: #9ed0d6;
+  font-weight: 500;
+}
 
 
 
