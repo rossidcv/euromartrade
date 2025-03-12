@@ -1,21 +1,6 @@
 @charset "UTF-8";
 /*Estructura Web*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .contenido-imagen .despachanteaduana,
 .contenido-imagen .despachos,
 .contenido-imagen .logistica,
@@ -1506,6 +1491,17 @@ footer h3 {
   font-weight: 500;
 }
 
+.modal-title {
+  font-family: 'Cambo', serif;
+  line-height: 1.4;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  color: #8cc63e;
+}
+.modal-header .btn-close  {
+  margin: 0;
+}
 
 
 /* ========================= Responsive ========================= */
