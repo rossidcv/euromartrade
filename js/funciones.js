@@ -113,9 +113,9 @@ if (window.innerWidth < 992) {
 
 
 
-$(".Click-here").on('click', function() {
-  $(".custom-model-main").addClass('model-open');
-}); 
-$(".close-btn, .bg-overlay").click(function(){
-  $(".custom-model-main").removeClass('model-open');
-});
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
