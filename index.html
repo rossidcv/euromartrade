@@ -644,9 +644,21 @@
 			    </div><!-- cierra container -->  
 			  </div><!-- cierra puntos-destacables -->  
 
+				<div class="box">
+					<a class="button" href="#popup1">Let me Pop up</a>
+				</div>
 
-<div class="fb-comments" data-href="https://amazing-sprite-fbffb8.netlify.app/" data-width="" data-numposts="5"></div>
+				<div id="popup1" class="overlay">
+					<div class="popup">
+						<h2>Here i am</h2>
+						<a class="close" href="#">&times;</a>
+						<div class="content">
+							Thank to pop me out of that button, but now i'm done so you can close this window.
+						</div>
+					</div>
+				</div>
 
+<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="5"></div>
 
 			  <div class="imagen">
 			    <div class="imagen-bloque">
@@ -738,7 +750,10 @@
 		<script src="js/classie.js"></script>
   <script src="js/pathLoader.js"></script>
   <script src="js/main.js"></script>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v22.0"></script>
+
+	<!-- Comentarios Facebook -->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v22.0"></script>
+
  	</body>
 </html>
