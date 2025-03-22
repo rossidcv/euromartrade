@@ -1,80 +1,12 @@
 @charset "UTF-8";
 /*Estructura Web*/
-
-.contenido-imagen .despachanteaduana,
-.contenido-imagen .despachos,
-.contenido-imagen .logistica,
-.contenido-imagen .certificaciones,
-.contenido-imagen .comercioexterior,
-.contenido-imagen .cargas,
-.contenido-imagen .trading,
-.contenido-imagen .oficinacompras,
-.contenido-imagen .analisisproyectos,
-.contenido-imagen .outsourcing {  
-   --s: 300px; 
-  aspect-ratio: 1;
-  box-sizing: border-box;
-  padding-inline: calc(var(--s)/10) 0;
-  object-fit: contain;
-  border-radius: 20px;
-  transform: perspective(350px) rotateY(calc(var(--_i,1)*10deg));
-  transition: .5s;
-  cursor: pointer;
-  box-shadow: -1px 15px 30px -12px black;
+.dropdown-item:focus, 
+.dropdown-item:hover,
+.dropdown-item.active,
+.collapse.active {
+    color: #fff;
+    background-color: #b7bbc1;
 }
-.contenido-imagen .despachanteaduana:hover,
-.contenido-imagen .despachos:hover,
-.contenido-imagen .logistica:hover,
-.contenido-imagen .certificaciones:hover,
-.contenido-imagen .cargas:hover,
-.contenido-imagen .comercioexterior:hover,
-.contenido-imagen .trading:hover,
-.contenido-imagen .oficinacompras:hover,
-.contenido-imagen .analisisproyectos:hover,
-.contenido-imagen .outsourcing:hover {
-  --_i: -1;
-  padding-inline: 0 calc(var(--s)/10);  
-}
-
-.contenido-imagen .comercioexterior {  
-  background: url("../imagenes/despachante/comercioexterior-fondo.jpg") 50%/cover; 
-  background-repeat: no-repeat;
-}
-.contenido-imagen .logistica {    
-  background: url("../imagenes/despachante/logistica-fondo.jpg") 50%/cover; 
-  background-repeat: no-repeat;
-}
-
-.contenido-imagen .certificaciones {  
-  background: url("../imagenes/despachante/certificaciones-fondo.jpg") 50%/cover; 
-  background-repeat: no-repeat;
-}
-
-.contenido-imagen .cargas {  
-  background: url("../imagenes/despachante/cargas-fondo.jpg") 50%/cover; 
-}
-
-.contenido-imagen .trading {  
-  background: url("../imagenes/despachante/trading-fondo.jpg") 50%/cover;  
-}
-.contenido-imagen .oficinacompras { 
- background: url("../imagenes/despachante/oficinacompras-fondo.jpg") 50%/cover;   
-}
-.contenido-imagen .analisisproyectos { 
- background: url("../imagenes/despachante/analisisproyectos-fondo.jpg") 50%/cover;   
-}
-.contenido-imagen .despachanteaduana { 
- background: url("../imagenes/despachante/despachanteaduana-fondo.jpg") 50%/cover;   
-}
-
-.contenido-imagen .despachos { 
- background: url("../imagenes/despachante/despachos-fondo.jpg") 50%/cover;   
-}
-.contenido-imagen .outsourcing { 
- background: url("../imagenes/despachante/outsourcing-fondo.jpg") 50%/cover;   
-}
-
-
 body {
   margin: 0;
   padding: 0;
@@ -92,6 +24,11 @@ a:focus{
 .container-lg {
   padding: 0;
 }
+h1 {
+  position: absolute;
+  color: transparent;
+}
+
 
 /*Navbar*/
 .navbar-nav .nav-link.active, 
@@ -114,11 +51,8 @@ a:focus{
 .navbar-logo {
   display: block;
   float: left;
+  padding: 0 10px 0 0;
 }
-.navbar-logo p  {
-  color: transparent;
-  display: none;
-  }
 .navbar-logo .logo-white { 
   position: absolute;
   opacity: 1;
@@ -368,9 +302,6 @@ a:focus{
 .contenedor-web { 
   background: #fff; 
 }
-.contenedor-web a { 
-  color: #be4856;
-}
 .ip-header {
   display: table;
   justify-content: center;
@@ -618,328 +549,170 @@ a:focus{
   background-color: #000;
 }
 
-/*NOSOTROS*/
-section {
-  padding: 0;
-}
-.empresa {
-  background-image: url(../imagenes/home.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-  position: relative;
-}
-.bloque-empresa {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 78px 0;
-} 
-.parrafo-nosotros {
-  padding: 50px 0;
-}
-.nosotros p {
-  font-family: 'News Cycle', sans-serif;
-  font-size: 16px;
-  color: #fff;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  padding: 0;
-  margin-bottom: 15px;
-}
-.nosotros span {
-  font-weight: bold;
-}
-.nosotros h2 {
+/*DESPACHANTE DE ADUANA*/
+.titulo-despachante { 
+  font-family: Cambo, serif;
   font-size: 45px;
-  font-family: 'Cambo', serif;
-  color: #bf0411;
-  font-weight: 700;
-  line-height: 1.4;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  padding-bottom: 55px;
-}
-.nosotros h2:after {
-  content: "";
-  position: relative;
-  height: 1px;
-  width: 150px;
-  background:rgba(0,0,0,.25);
-  left: 40%;
-  top: 15px;
-  display: block;
-}
-.iconos-caracteristicas {
-  padding-bottom: 45px;
-}
-.caracteristicas-nosotros h3 {
-  font-size: 35px;
-  font-family: 'Cambo', serif;
-  color: #fff;
-  line-height: 1.4;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-.caracteristicas-nosotros h2:after {
-  content: "";
-  position: relative;
-  height: 1px;
-  left: 0;
-  width: 100%;
-  background:rgba(0,0,0,.25);
-  top: 15px;
-  display: block;
-}
-.caracteristicas-nosotros p{
-  font-family: 'News Cycle', sans-serif;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.5;
-  margin: 0 auto;
-  text-align: center;
-  font-weight: lighter;
-  height: 97px;
-}
-.caracteristicas-nosotros i {
-  font-size: 45px;
-  color: #b8db7c;
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  padding: 30px 0 15px 0;
-  width:100%;
-  -webkit-transition:all .9s ease;
-  -moz-transition:all .9s ease;
-  -o-transition:all .9s ease;
-  -ms-transition:all .9s ease;
-}
-.caracteristicas-nosotros i:hover {
-  -webkit-transform:scale(1.25);
-  -moz-transform:scale(1.25);
-  -ms-transform:scale(1.25);
-  -o-transform:scale(1.25);
-  transform:scale(1.25);
-  color: #9ed0d6;
-}
-
-/*FORMULARIO*/
-.bloque-formulario {
-  background-color: #000;
-  padding: 30px 0 52px 0;  
-  height: auto;
-}
-.asesoramiento {
-  position: relative;
-  top: -105px;  
-  margin-bottom: -105px;
-  overflow: hidden;
-  z-index: 9;
-}
-.texto-intro-formulario {
-  padding: 25px 0;
-  margin: 0 auto;
-}
-.texto-intro-formulario h3{
-  font-family: 'Cambo', serif;
-  font-size: 35px;
-  color: #8cc63e;
-  line-height: 1.2;
+  color: #6F817B;
   letter-spacing: 1px;
   text-align: center;
   position: relative;
-  padding: 0;
+  top:90px;
+}
+section.comercio-exterior,
+section.despachante-aduana,
+section.certificaciones,
+section.outsourcing,
+section.trading {
+  background-color: #dee2e6;  
+}
+section.despachos,
+section.logistica,
+section.cargas,
+section.oficinacompras,
+section.analisisproyectos {
+  background-color: #d4eefd;  
+}
+.comercioexterior-bloque,
+.despachos-bloque,
+.despachanteaduana-bloque,
+.logistica-bloque,
+.certificaciones-bloque,
+.cargas-bloque,
+.outsourcing-bloque,
+.oficinacompras-bloque,
+.trading-bloque
+.analisisproyectos-bloque {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+.comercioexterior-bloque .contenido-imagen,
+.despachos-bloque .contenido-imagen,
+.despachanteaduana-bloque .contenido-imagen,
+.logistica-bloque .contenido-imagen,
+.certificaciones-bloque .contenido-imagen,
+.cargas-bloque .contenido-imagen,
+.outsourcing-bloque .contenido-imagen,
+.oficinacompras-bloque .contenido-imagen,
+.trading-bloque .contenido-imagen,
+.analisisproyectos-bloque .contenido-imagen {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.comercioexterior-bloque .contenido-texto h3,
+.despachos-bloque .contenido-texto h3,
+.despachanteaduana-bloque .contenido-texto h3,
+.logistica-bloque .contenido-texto h3,
+.certificaciones-bloque .contenido-texto h3,
+.cargas-bloque .contenido-texto h3,
+.outsourcing-bloque .contenido-texto h3,
+.oficinacompras-bloque .contenido-texto h3,
+.trading-bloque .contenido-texto h3,
+.analisisproyectos-bloque .contenido-texto h3 {
+  font-family: 'Cambo', serif;
+  font-size: 35px;
+  color: #6F817B;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: left;
+  position: relative;
+  padding: 10px 0 20px 0;
   margin: 0;
 }
-.texto-intro-formulario p {
-  font-family: 'News Cycle', sans-serif;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  text-align: center;
-  position: relative;
-  padding-top: 20px;
+.comercioexterior-bloque .contenido-texto h3 span,
+.despachos-bloque .contenido-texto h3 span,
+.despachanteaduana-bloque .contenido-texto h3 span,
+.logistica-bloque .contenido-texto h3 span,
+.certificaciones-bloque .contenido-texto h3 span,
+.cargas-bloque .contenido-texto h3 span,
+.outsourcing-bloque .contenido-texto h3 span,
+.oficinacompras-bloque .contenido-texto h3 span,
+.trading-bloque .contenido-texto h3 span,
+.analisisproyectos-bloque .contenido-texto h3 span {
+  font-weight: bold;
 }
-.texto-intro-formulario .campos-obligatorios {
-  font-family: 'News Cycle', sans-serif;
-  font-size: 13px;
-  color: #fff;
-  line-height: 1.4;
-  margin: 0 auto;
-  font-style: italic;
-  text-align: center;
-  padding: 0 15px 15px 15px;
-}
-.datos-cliente-formulario {
-  border-right: 1px solid #333;
-  padding-right: 15px;
-}
-.datos-cliente-formulario,
-.datos-servicio-formulario{
-  overflow: hidden;
-}
-.datos-cliente-formulario h4,
-.datos-servicio-formulario h4 {
-  font-family: 'Cambo', serif;
-  line-height: 1.4;
-  margin: 0 auto;
-  text-align: left;
-}
-.datos-cliente-formulario h4 {
-  padding: 0 0 15px 0;
-  font-size: 20px;  
+.comercioexterior-bloque p i,
+.despachos-bloque p i,
+.trading-bloque p i {
+  font-size: 15px;
   color: #8cc63e;
 }
-.datos-servicio-formulario h4 {
-  font-family: 'Cambo', serif;
-  line-height: 1.4;
-  margin: 0 auto;
-  text-align: left;
-  padding: 0 0 15px 15px;
-  font-size: 20px;
-  color: #8cc63e;
+.comercio-exterior .contenido-texto { 
+  padding: 100px 30px !important;
 }
-.datos-servicio-formulario p {
-  font-family: 'Cambo', serif;
-  line-height: 1.4;
-  margin: 0 auto;
-  font-size: 12px;
-  text-align: left;
-  color: #fff;
-  padding: 0 15px 15px 15px;
+.contenido-imagen .comercioexterior,
+.contenido-imagen .despachos,
+.contenido-imagen .despachanteaduana,
+.contenido-imagen .logistica,
+.contenido-imagen .certificaciones,
+.contenido-imagen .cargas,
+.contenido-imagen .outsourcing,
+.contenido-imagen .oficinacompras,
+.contenido-imagen .trading,
+.contenido-imagen .analisisproyectos {  
+   --s: 300px; 
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  padding-inline: calc(var(--s)/10) 0;
+  object-fit: contain;
+  border-radius: 20px;
+  transform: perspective(350px) rotateY(calc(var(--_i,1)*10deg));
+  transition: .5s;
+  cursor: pointer;
+  box-shadow: -1px 15px 30px -12px black;
 }
-.formulario,
-.formulario-completo {
-  overflow: hidden;
+.contenido-imagen .comercioexterior:hover,
+.contenido-imagen .despachos:hover,
+.contenido-imagen .despachanteaduana:hover,
+.contenido-imagen .logistica:hover,
+.contenido-imagen .certificaciones:hover,
+.contenido-imagen .cargas:hover,
+.contenido-imagen .outsourcing:hover,
+.contenido-imagen .oficinacompras:hover,
+.contenido-imagen .trading:hover,
+.contenido-imagen .analisisproyectos:hover {
+  --_i: -1;
+  padding-inline: 0 calc(var(--s)/10);  
 }
-form {
-  overflow: hidden;
-}
-select {
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  display: inline;
-  height: 32px;
-  width: 100%;
-  margin-bottom: 15px;
-  font-family: 'News Cycle', sans-serif;
-  color: #888;
-  font-size: 15px;
-  padding: 0 12px 6px 12px;  
-}
-textarea.form-control-servicio {
-  height: 125px;
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  display: inline;
-  width: 100%;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-}
-input[type=file] {
-  display: none;
-}
-.form-group {
-    margin-bottom: 15px;
-}
-.form-control {
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  display: inline;
-  font-family: 'News Cycle', sans-serif;
-  font-size: 15px;
-  color: #888 !important;
-  border-bottom: 1px solid #fff;
-}
-.form-control:focus {
-  border-bottom: 1px solid #8cc63e;
-}
-.form-control-area {
-  background-color: #e5e5e5;
-  border: none;
-  border-radius: 0;
-  display: inline;
-  height: 40px;
-  width: 28%;
-}
-.form-control-telefono {
-  background-color: #e5e5e5;
-  border: none;
-  border-radius: 0;
-  display: inline;
-  height: 40px;
-  width: 70%;
-  margin-left: 5px;
-}
-.boton-enviar {
-  font-family: 'Archivo Narrow', sans-serif;  
-  font-size: 18px;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  background-color: #8cc63e;
-  display: block;
-  position: relative;
-  padding: 8px;
-  width: 100%;
-  transition: all ease 0.5s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-.boton-enviar:hover {
-  background: #9ed0d6;
-  font-weight: 500;  
-}
-.boton-enviar a {
-  color: #fff;
-}
-.boton-enviar a:hover{
-  text-decoration: none;
-  list-style-type: none;
-}
-input, button, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-button, html input[type="button"], 
-input[type="reset"], 
-input[type="submit"] {
-  -webkit-appearance: button;
-}
-
-/*SERVICIO*/
-.servicio {
-  position: relative;
+.contenido-imagen .comercioexterior {  
+  background: url("../imagenes/despachante/comercioexterior-fondo.jpg") 50%/cover; 
   background-repeat: no-repeat;
-  max-width: 100%;
-  background-image: url(../imagenes/servicios.jpeg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 100% 50%;
-  padding: 0;
 }
-.servicios-bloque {
-  background: -webkit-linear-gradient(-45deg, rgba(150, 150, 150, 0.5), rgba(150, 150, 150, 0.5) 100%);
+.contenido-imagen .despachos { 
+ background: url("../imagenes/despachante/despachos-fondo.jpg") 50%/cover;   
 }
-.servicios-bloque .contenido-texto,
-.representacion-bloque .contenido-texto,
-.consultoria-bloque .contenido-texto {
-  background: #fff !important;
+.contenido-imagen .despachanteaduana { 
+ background: url("../imagenes/despachante/despachanteaduana-fondo.jpg") 50%/cover;   
+}
+.contenido-imagen .logistica {    
+  background: url("../imagenes/despachante/logistica-fondo.jpg") 50%/cover; 
+  background-repeat: no-repeat;
+}
+.contenido-imagen .certificaciones {  
+  background: url("../imagenes/despachante/certificaciones-fondo.jpg") 50%/cover; 
+  background-repeat: no-repeat;
+}
+.contenido-imagen .cargas {  
+  background: url("../imagenes/despachante/cargas-fondo.jpg") 50%/cover; 
+}
+.contenido-imagen .outsourcing { 
+ background: url("../imagenes/despachante/outsourcing-fondo.jpg") 50%/cover;   
+}
+.contenido-imagen .oficinacompras { 
+ background: url("../imagenes/despachante/oficinacompras-fondo.jpg") 50%/cover;   
+}
+.contenido-imagen .trading {  
+  background: url("../imagenes/despachante/trading-fondo.jpg") 50%/cover;  
+}
+.contenido-imagen .analisisproyectos { 
+ background: url("../imagenes/despachante/analisisproyectos-fondo.jpg") 50%/cover;   
 }
 .contenido-texto {
   padding: 120px 30px;
@@ -980,132 +753,175 @@ input[type="submit"] {
   line-height: 1.5;
   padding-bottom: 5px;
 }
-
-/*SERVICIOS*/
-
-.comercioexterior-bloque,
-.despachos-bloque,
-.despachanteaduana-bloque,
-.logistica-bloque,
-.certificaciones-bloque,
-.cargas-bloque,
-.outsourcing-bloque,
-.oficinacompras-bloque,
-.trading-bloque
-.analisisproyectos-bloque {
-  height: 100%;
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-}
-.comercioexterior-bloque,
-.despachanteaduana-bloque,
-.certificaciones-bloque,
-.outsourcing-bloque,
-.trading-bloque {
-  background-color: #dee2e6;  
-}
-.despachos-bloque,
-.logistica-bloque,
-.cargas-bloque,
-.oficinacompras-bloque,
-.analisisproyectos-bloque {
-  background-color: #d4eefd;  
-}
-.comercioexterior-bloque .contenido-imagen,
-.despachos-bloque .contenido-imagen,
-.despachanteaduana-bloque .contenido-imagen,
-.logistica-bloque .contenido-imagen,
-.certificaciones-bloque .contenido-imagen,
-.cargas-bloque .contenido-imagen,
-.outsourcing-bloque .contenido-imagen,
-.oficinacompras-bloque .contenido-imagen,
-.trading-bloque .contenido-imagen,
-.analisisproyectos-bloque .contenido-imagen {
-  height: 100%;
+.subtitulo-icono {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-/*.comercioexterior-bloque .contenido-imagen img,
-.despachos-bloque .contenido-imagen img,
-.despachanteaduana-bloque .contenido-imagen img,
-.logistica-bloque .contenido-imagen img,
-.certificaciones-bloque .contenido-imagen img,
-.cargas-bloque .contenido-imagen img,
-.outsourcing-bloque .contenido-imagen img,
-.oficinacompras-bloque .contenido-imagen img,
-.trading-bloque .contenido-imagen img,
-.analisisproyectos-bloque .contenido-imagen img {
   margin: 0 auto;
   position: relative;
-  display: block;
-  height: 400px;  
-}*/
-
-.comercioexterior-bloque .contenido-texto h3,
-.despachos-bloque .contenido-texto h3,
-.despachanteaduana-bloque .contenido-texto h3,
-.logistica-bloque .contenido-texto h3,
-.certificaciones-bloque .contenido-texto h3,
-.cargas-bloque .contenido-texto h3,
-.outsourcing-bloque .contenido-texto h3,
-.oficinacompras-bloque .contenido-texto h3,
-.trading-bloque .contenido-texto h3,
-.analisisproyectos-bloque .contenido-texto h3 {
-  font-family: 'Cambo', serif;
-  font-size: 35px;
-  color: #6F817B;
-  line-height: 1;
-  letter-spacing: 1px;
-  text-align: left;
-  position: relative;
-  padding: 10px 0 20px 0;
-  margin: 0;
-}
-.comercioexterior-bloque .contenido-texto h3 span,
-.despachos-bloque .contenido-texto h3 span,
-.despachanteaduana-bloque .contenido-texto h3 span,
-.logistica-bloque .contenido-texto h3 span,
-.certificaciones-bloque .contenido-texto h3 span,
-.cargas-bloque .contenido-texto h3 span,
-.outsourcing-bloque .contenido-texto h3 span,
-.oficinacompras-bloque .contenido-texto h3 span,
-.trading-bloque .contenido-texto h3 span,
-.analisisproyectos-bloque .contenido-texto h3 span {
-  font-weight: bold;
-}
-.comercioexterior-bloque p i,
-.despachos-bloque p i,
-.trading-bloque p i {
-  font-size: 15px;
-  color: #8cc63e;
 }
 .circle {
   background: #fff;
   border-radius: 50%;
   color: #b8db7c;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin: 0 auto;
+  height: 35px;
+  width: 35px;
+  margin: 0;
+  position: relative;
+  left: 0;
+  float: left;
 }
-.circle span {
-  display: table-cell;
-  vertical-align: middle;
-  height: 40px;
-  width: 40px;
+.circle span {  
+  height: 35px;
+  width: 35px;
   text-align: center;
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;   
+}
+.contenido-texto h4 {
+  font-family: 'Cambo', serif;
+  font-size: 18px;
+  font-weight: lighter;
+  font-style: italic;
+  text-align: left;
+  margin: 0;  
+  color: #8cc63e;
+  padding-left: 5px;
 }
 
-/*IMPORTACIÓN / EXPOTACIÓN*/
+/*EMPRESA*/
+section {
+  padding: 0;
+}
+.empresa {
+  background-image: url(../imagenes/home.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+.bloque-empresa {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 78px 0;
+}
+.nosotros p {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.nosotros span {
+  font-weight: bold;
+}
+.nosotros h2 {
+  font-size: 45px;
+  font-family: 'Cambo', serif;
+  color: #bf0411;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding-bottom: 55px;
+}
+.nosotros h2:after {
+  content: "";
+  position: relative;
+  height: 1px;
+  width: 150px;
+  background:rgba(0,0,0,.25);
+  left: 40%;
+  top: 15px;
+  display: block;
+}
+.iconos-caracteristicas {
+  padding-bottom: 55px;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 270px;
+}
+.caracteristicas-nosotros h3 {
+  font-size: 35px;
+  font-family: 'Cambo', serif;
+  color: #fff;
+  line-height: 1.4;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.caracteristicas-nosotros h2:after {
+  content: "";
+  position: relative;
+  height: 1px;
+  left: 0;
+  width: 100%;
+  background:rgba(0,0,0,.25);
+  top: 15px;
+  display: block;
+}
+.caracteristicas-nosotros p{
+  font-family: 'News Cycle', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.5;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: lighter;
+  height: 97px;
+}
+.caracteristicas-nosotros i {
+  font-size: 45px;
+  color: #b8db7c;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding: 0 0 15px 0;
+  width:100%;
+  -webkit-transition:all .9s ease;
+  -moz-transition:all .9s ease;
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease;
+}
+.caracteristicas-nosotros i:hover {
+  -webkit-transform:scale(1.25);
+  -moz-transform:scale(1.25);
+  -ms-transform:scale(1.25);
+  -o-transform:scale(1.25);
+  transform:scale(1.25);
+  color: #9ed0d6;
+}
+
+/*SERVICIOS*/
+.servicio {
+  position: relative;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-image: url(../imagenes/servicios.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 100% 50%;
+  padding: 0;
+}
+.servicios-bloque {
+  background: -webkit-linear-gradient(-45deg, rgba(150, 150, 150, 0.5), rgba(150, 150, 150, 0.5) 100%);
+}
+.servicios-bloque .contenido-texto,
+.representacion-bloque .contenido-texto,
+.consultoria-bloque .contenido-texto {
+  background: #fff !important;
+}
+
+/*IMPORTACIÓN / EXPORTACIÓN*/
 .titulo-central {
   font-family: Cambo, serif;
   font-size: 35px;
@@ -1474,15 +1290,14 @@ footer h3 {
 .btn-comentarios  {
   text-align: center;
   font-family: 'Heebo', sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 9px;
+  font-weight: lighter;
+  letter-spacing: normal;
   text-transform: uppercase;
   border-radius: 50px;
-  font-weight: 700;
   background-color: #8cc63e;
   color: #fff;
-  padding: 10px;
+  padding: 8px;
   display: flex;
   align-items: center;
 }
@@ -1601,7 +1416,7 @@ footer h3 {
   .scrolled .navbar-logo .logo-white {
     opacity: 1;
     transition: max-height 0.4s, opacity 0.3s;
-    margin-top: 6px;
+    margin-top: 0;
     max-height: 45px;
     position: static;
   }
@@ -1609,6 +1424,9 @@ footer h3 {
     max-height: 50px; 
     margin-left:25px;
     margin-top: 5px;
+  }
+  .comentarios { 
+    margin: 5px;
   }
   .datos-cliente-formulario {
     border-right: none;
@@ -1700,12 +1518,22 @@ footer h3 {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: 1fr;
   }
+  .iconos-caracteristicas {
+    height: auto;
+    padding-bottom: 0;
+  }  
+  .nosotros {
+    padding-top: 50px;
+  }  
 }
 
 @media (max-width: 480px) {
   .contenido-imagen img {
     height: 200px;
   }
+  .iconos-caracteristicas {
+    padding-bottom: 20px;
+  }  
 }
 
 @media (max-width: 375px) {
@@ -1717,13 +1545,3 @@ footer h3 {
       margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
   }
 }
-/*.navbar-nav .nav-link.active, 
-.navbar-nav .show > .nav-link {
-  color: #ABC566 !important;
-  border-bottom: 1px solid #ABC566;
-}
- .navbar-nav .nav-link.active, 
- .navbar-nav .show > .nav-link,
-  .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
-    color: #fff !important;
-  }*/

@@ -1,7 +1,6 @@
 $(document).ready(function(){
   var flag = false;
   var scroll;
-  var percentTime;
     
   $(window).scroll(function(){
     scroll = $(window).scrollTop();
@@ -40,8 +39,9 @@ $(document).ready(function(){
   var hamburger = document.querySelector(".hamburger");
     menu.addEventListener("click", function() {
     hamburger.classList.toggle("is-active");
-  });    
+  }); 
 });
+
 
 /*SMOOTH SCROLLING*/
 $(function () {
@@ -57,65 +57,9 @@ $(function () {
   new WOW().init();
 });
 
-
 $(document).ready(function(){ 
   setTimeout(function () {
     $('.arriba').removeClass('animated1 rotateIn zoomIn').addClass('animated2 rotateLeft');}, 2500 ); // aca se define el segundo giro
   setTimeout(function () {
     $('.abajo').addClass('animated1 fadeIn');}, 2500 ); //aca se define el momento en que aparece la imagen inferior
 });
-
-// Permite que se ejecute el codigo cuando se halla cargado la pagina
-$(function() { 
-/*MENÃš DESPLEGABLE*/
-  $(".menu-desplegable").click(function(){
-    $ (this).children(".sub-menu").slideToggle();
-  })
-  $(".menu-desplegable").click(function(pp){
-    pp.stopPropagation();
-  }) 
-});
-document.addEventListener("DOMContentLoaded", function(){
-// make it as accordion for smaller screens
-if (window.innerWidth < 992) {
-
-  // close all inner dropdowns when parent is closed
-  document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-    everydropdown.addEventListener('hidden.bs.dropdown', function () {
-      // after dropdown is hidden, then find all submenus
-        this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-          // hide every submenu as well
-          everysubmenu.style.display = 'none';
-        });
-    })
-  });
-
-  document.querySelectorAll('.dropdown-menu a').forEach(function(element){
-    element.addEventListener('click', function (e) {
-        let nextEl = this.nextElementSibling;
-        if(nextEl && nextEl.classList.contains('submenu')) {  
-          // prevent opening link if link needs to open dropdown
-          e.preventDefault();
-          if(nextEl.style.display == 'block'){
-            nextEl.style.display = 'none';
-          } else {
-            nextEl.style.display = 'block';
-          }
-
-        }
-    });
-  })
-}
-// end if innerWidth
-}); 
-// DOMContentLoaded  end
-
-
-
-
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
