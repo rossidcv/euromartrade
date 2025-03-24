@@ -1,88 +1,36 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2014, Codrops
- * http://www.codrops.com
- */
-(function() {
+jQuery(document).ready(function() {
+    jQuery('#fullpageEndeos').fullpage({
+        anchors: ['empresa', 'servicio', 'servicios', 'contacta', 'working'],
+        menu: '#menu',
+		scrollingSpeed: 700,
+       
 
-	var support = { animations : Modernizr.cssanimations },
-		container = document.getElementById( 'ip-container' ),
-		header = container.querySelector( 'header.ip-header' ),
-		loader = new PathLoader( document.getElementById( 'ip-loader-circle' ) ),
-		animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
-		// animation end event name
-		animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
+        //events
+      
+         afterLoad: function(anchorLink, index){
 
-	function init() {
-		var onEndInitialAnimation = function() {
-			if( support.animations ) {
-				this.removeEventListener( animEndEventName, onEndInitialAnimation );
-			}
+            if(anchorLink=='empresa'){
+                jQuery('#empresa').find('.empresa').delay(200).animate({
+                    left:'0%'
+                },1000,'easeOutExpo');
+               
+            }
+            if(anchorLink=='servicio'){
+                jQuery('#servicios').find('.servicio').delay(200).slideDown(1000,'easeOutCubic');
 
-			startLoading();
-		};
+            }
+            if(anchorLink=='working'){
+                jQuery('#section4 h2').delay(500).animate({
+                    left:'0%'
+                },1500,'easeOutExpo',function(){
+                     jQuery('#section4 img').fadeTo(4000,1);
+                })
+               
+            }
 
-		// disable scrolling
-		window.addEventListener( 'scroll', noscroll );
-
-		// initial animation
-		classie.add( container, 'loading' );
-
-		if( support.animations ) {
-			container.addEventListener( animEndEventName, onEndInitialAnimation );
-		}
-		else {
-			onEndInitialAnimation();
-		}
-	}
-
-	function startLoading() {
-		// simulate loading something..
-		var simulationFn = function(instance) {
-			var progress = 0,
-				interval = setInterval( function() {
-					progress = Math.min( progress + Math.random() * 0.1, 1 );
-
-					instance.setProgress( progress );
-
-					// reached the end
-					if( progress === 1 ) {
-						classie.remove( container, 'loading' );
-						classie.add( container, 'loaded' );
-						clearInterval( interval );
-
-						var onEndHeaderAnimation = function(ev) {
-							if( support.animations ) {
-								if( ev.target !== header ) return;
-								this.removeEventListener( animEndEventName, onEndHeaderAnimation );
-							}
-
-							classie.add( document.body, 'layout-switch' );
-							window.removeEventListener( 'scroll', noscroll );
-						};
-
-						if( support.animations ) {
-							header.addEventListener( animEndEventName, onEndHeaderAnimation );
-						}
-						else {
-							onEndHeaderAnimation();
-						}
-					}
-				}, 80 );
-		};
-
-		loader.setProgressFn( simulationFn );
-	}
-	
-	function noscroll() {
-		window.scrollTo( 0, 0 );
-	}
-
-	init();
-
-})();
+        },
+        afterRender: function(){
+                jQuery('#section0 img').delay(700).animate({left:'0%'},1500,'easeOutExpo');    
+        },  
+    });
+});
