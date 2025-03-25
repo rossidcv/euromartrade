@@ -3,12 +3,10 @@
 
 
 
-.dropdown-item:hover,
-.dropdown-item:focus,
-.dropdown-item:active,
-.scrolled .dropdown-item:hover, 
-.scrolled .dropdown-item:focus,
-.scrolled .dropdown-item:active {
+.nav-link:hover,
+.nav-link:active,
+.scrolled .nav-link:hover, 
+.scrolled .nav-link:active {
   color: #fff;
   background: #b7bbc1;
 }
@@ -264,7 +262,8 @@ a:focus{
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
-  color: #ABC566 !important;
+  color: #fff !important;
+  background-color:#b7bbc1 ;
   border-bottom: 1px solid #ABC566;
 }
 .dropdown-menu {
@@ -656,6 +655,9 @@ section.analisisproyectos {
 }
 .comercio-exterior .contenido-texto { 
   padding: 100px 30px !important;
+}
+.analisisproyectos .contenido-texto { 
+  padding: 220px 30px;
 }
 .contenido-imagen .comercioexterior,
 .contenido-imagen .despachos,
@@ -1333,8 +1335,8 @@ footer h3 {
 
 @media (max-width: 1200px) {
   
-  .dropdown-item.active, 
-  .scrolled .dropdown-item.active,
+  .nav-link.active, 
+  .scrolled .nav-link.active,
   .navbar-nav li a.active {
     color: #fff !important;
     background: #b7bbc1 !important;
@@ -1506,7 +1508,8 @@ footer h3 {
     font-size: 25px;
   }
   .contenido-texto h2,
-  .contactenos h2 {
+  .contactenos h2,
+  .titulo-despachante {
     font-size: 40px;
   }  
   .comercioexterior-bloque .contenido-imagen, 
@@ -1520,6 +1523,9 @@ footer h3 {
   .trading-bloque .contenido-imagen, 
   .analisisproyectos-bloque .contenido-imagen {
     padding: 0 0 30px 0;
+  }
+  .analisisproyectos .contenido-texto { 
+    padding: 120px 30px;
   }
   .card-container {
     grid-template-columns: repeat(2, 1fr);

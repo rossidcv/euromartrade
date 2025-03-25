@@ -66,15 +66,14 @@ $(document).ready(function(){
 
 
 
+
 /*Cambiar botón fijo del Menú*/
 
-$(document).ready(function(){ 
-  $(".nav-item").on("click", function(e){
+/*$(document).ready(function(){ 
+  $(".nav-link").on("click", function(e){
     // Remove class active form all li.nav-tiem
     $("li.nav-item").removeClass("active");
     // Add Class to current Element. 
     $(this).addClass("active");
   });
-});
-
-
+});*/
